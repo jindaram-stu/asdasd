@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+    <title>여행, 그리고</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div id="first-page" class="first-page">
+                <p id="logo">여행, 그리고</p>
+                <button class="btn_start">떠나기</button>
+            </div>
+            <div id="second-page" class="second-page">
+                <p id="mungu" class="mungu">여행에 가져갈 짐을 선택해주세요.</p>
+                <img class="carrier" src="img/carrier.png" alt="">
+                <div class="btn-list">
+                    <button class="lug1 cloth">옷</button>
+                    <button class="lug2 korean-food">한식</button><br>
+                    <button class="lug1 washing">세면도구</button>
+                    <button class="lug2 cellphone">핸드폰</button><br>
+                    <button class="lug1 diary">일기장</button>
+                    <button class="lug2 selfie">셀카봉</button> <br>
+                    <button class="lug1 medicine">비상약</button>
+                    <button class="lug2 cash">현금</button>
+                </div><br>
+                <button class="accept">확인</button>
+            </div>
+
+            <div class="third-page" id="third-page">
+                <p id="reser" class="reser">먼저 비행기 표를 예매해주세요.</p>
+                
+                <div class="reser-t first-reser" id="first-reser">
+                    <p style="font-family: 'Malgun Gothic', sans-serif; font-size : 15px; position:relative; left : 30px; top : 90px;">트래블 웨이</p>
+                    <img class="travelway" src="img/travelway.svg" alt="">
+                    <p class = "start-time">10:35</p>
+                    <p class="ICN">ICN</p>
+                    <p class = "end-time">12:30</p>
+                    <p class="HEA">HEA</p>
+                    <p class="arrow">→</p>
+                    <div class="first-hub">
+                        <img class="airplane-go" src="img/airplane_go.svg" alt="">
+                       <p class="opt">직항</p> 
+                   </div>
+                   <div class="first-price">
+                       <p class = "price">￦950,000</p>
+                   </div>
+                   <button class="yeme-btn first-yeme">예매</button>
+                </div>
+                <div class="reser-t second-reser" id="second-reser">
+                    <p style="font-family: 'Malgun Gothic', sans-serif; font-size : 15px; position:relative; left : 36px; top : 90px;">케이 에어</p>
+                    <img class="k-air" src="img/K-air.svg" alt="">
+                    <p class = "start-time">10:35</p>
+                    <p class="ICN">ICN</p>
+                    <p class = "end-time">12:30</p>
+                    <p class="HEA">HEA</p>
+                    <p class="arrow">→</p>
+                  
+                    <div class="second-hub">
+                         <img class="airplane-go" src="img/airplane_go.svg" alt="">
+                        <p class="opt">경유1회</p> 
+                    </div>
+                    <div class="second-price">
+                        <p class = "price">￦750,000</p>
+                    </div>
+                    <button class="yeme-btn second-yeme">예매</button>
+                </div>
+                <div class="reser-t third-reser" id="third-reser">
+                    <p style="font-family: 'Malgun Gothic', sans-serif; font-size : 15px; position:relative; left : 30px; top : 80px;">대림 항공</p>
+                    <img class="daelim-airway"src="img/daelim-airway.svg" alt="">
+                    <p class = "start-time" >10:35</p>
+                    <p class="ICN">ICN</p>
+                    <p class = "end-time">12:30</p>
+                    <p class="HEA">HEA</p>
+                    <p class="arrow">→</p>
+                    <div class="third-hub">
+                         <img class="airplane-go" src="img/airplane_go.svg" alt="">
+                        <p class="opt">직항</p> 
+                    </div>
+                    <div class="third-price">
+                        <p class = "price">￦850,000</p>
+                    </div>
+                    <button class="yeme-btn third-yeme">예매</button>
+                    <img class="nature" src="img/nature.svg" alt="">
+                    
+                </div>
+                    
+            </div>
+
+            <div class="fourth-page" id="fourth-page">
+                <p class="headline">#공항</p>
+                <p class="dia-1">" 출국에 앞서, 먼저 여권 확인하겠습니다. "</p>
+                <img class="passport" src="img/passport.svg" alt="">
+                
+                    <img id= "pass" class="passport-in" src="img/passport_in.svg" alt="">
+                  
+                    <div class="passport-name">
+                        <p class = "ps-name">이름:</p>
+                        <p class = "ps-age">나이:</p>
+                        <p class = "ps-nation">국적:</p>
+                        <input class="name-input" type="text" >
+                        <input class="age-input" type="text" >
+                        <input class="nation-input" type="text" >
+                        <button class="ps-accept">확인</button>
+                    </div>
+                    <div class="passport-name-end">
+                        <p class = "ps-name-2">이름:</p>
+                        <p class = "ps-name-end">이름</p>
+                        <p class = "ps-age-2">나이:</p>
+                        <p class = "ps-age-end">이름</p>
+                        <p class = "ps-nation-2">국적:</p>
+                        <p class = "ps-nation-end">이름</p>
+                       
+                    </div>
+                    <img id="chulguk" class = "chulguk" src="img/chulguk.svg" alt="">
+                    <img class="stamp" src="img/stamp.svg" alt="">
+                    
+                
+                
+            </div>
+            <div class="testPage">
+                <div class="kiosk-all">
+                    <img id="kiosk" class = "kiosk" src="img/kiosk.svg" alt="">
+                    <img id="paper" class = "paper" src="img/paper.svg" alt="">
+                    <img id="mobile" class = "mobile" src="img/mobile.svg" alt="">
+                    <img id="ticket-box" class="ticket-box" src="img/ticket-send.svg" alt="">
+                </div>
+                <div class="hid">
+                    <img id="tw-bp" class="tw-bp" src="img/TW-BP.svg" alt="">
+                    <img id="ka-bp" class="ka-bp" src="img/KA-BP.svg" alt="">
+                    <img id="da-bp" class="da-bp" src="img/DA-BP.svg" alt="">
+                    <p class="bp-name">진승범</p> 
+                </div>
+
+                <img class="testpass" src="img/passport.svg" alt="">
+                <button class="depart">출국</button>
+                
+                    
+            </div>
+
+            <div class="airplane-page">
+                <div class="window">
+                    <img class="air-title" src="img/airplane/title.svg" alt="">
+                    <img class="air-sky" src="img/airplane/sky.svg" alt="">
+                    <div class="hid-cloud">
+                        <img class="air-cloud" src="img/airplane/cloud.svg" alt="">
+                        <img class="air-cloud2" src="img/airplane/cloud.svg" alt="">
+                    </div>
+                    
+                    <img class="air-title-back" src="img/airplane/titie-back.svg">
+                    <img class="mirror" src="img/airplane/mirror.svg" alt="">
+                    <p class="air-dia1">눈을 감고, 여행 가는 기분을 느껴보세요.</p>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <script>  
+        let name = "";
+        let age = null;
+        let nation = "";
+        let ticketOf = null;
+        let ticketType = "tw-bp";
+        
+        $('.testPage').hide();
+        $('#first-page').hide();
+        $('#second-page').hide();
+        $('#third-page').hide();
+        $('#fourth-page').hide();
+
+        let firstView = function () {
+            $('#logo').animate({opacity : '+=1'},2000)
+        }
+        let secondView = function() {
+            $('#mungu').animate({opacity : '+=1'},2000);
+            $('.carrier').animate({opacity : '+=1',left : '+=30px'},2000,"swing",() => {
+                $('.lug2').animate({opacity : '+=1',left : '-=30',top : '-=30'},1000,'swing');
+                $('.lug1').animate({opacity : '+=1',left : '-=30',top : '-=30'},1000,'swing');
+            });
+            
+        }
+
+        let thirdView = function() {
+            $('#first-reser').css({bottom: '-=500px', opacity: '0'});
+            $('#second-reser').css({bottom: '-=500px', opacity: '0'});
+            $('#third-reser').css({bottom: '-=500px', opacity: '0'});
+            $('#first-reser').animate({bottom: '+=500px', opacity: '+=1'},1000,'swing',() => {
+                $('#second-reser').animate({bottom: '+=500px', opacity: '+=1'},1000,'swing',() => {
+                    $('#third-reser').animate({bottom: '+=500px', opacity: '+=1'},1000,'swing');
+                });
+            });
+            $('#first-reser').click(() => {
+                ticketType = "tw-bp";
+            });
+            $('#second-reser').click(() => {
+                ticketType = "ka-bp";
+            });
+            $('#third-reser').click(() => {
+                ticketType = "da-bp";
+            });
+           
+           
+           
+        }
+      
+
+      
+
+     
+        let fourthView = function() {
+        
+            $('.stamp').hide();
+            $('.chulguk').hide();
+            $('.passport-name-end').hide();
+            $('.passport-name').hide();
+            $('.passport-in').hide();
+            $('.passport').hide();
+            $('.passport').css({bottom : '-700px'});
+            $('.passport-in').css({bottom:'-80px'});
+            $('.headline').animate({opacity : '+=1'},2000,"swing",setTimeout(()=> {
+                $('.headline').animate({opacity : '-=1'},2000,"swing",()=> {
+                    $('.dia-1').animate({opacity: '+=1'},2000,"swing",setTimeout(()=> {
+                        $('.dia-1').animate({opacity: '-=1'},2000,"swing",()=> {
+                            $('.headline').css({display : 'none'});
+                            $('.dia-1').css({display : 'none'});
+                            $('.passport').show();
+                            $('.passport').animate({bottom : '+=700px'},1000,'swing',() => {
+                                $('.passport').mouseenter($('.passport').animate({transform : 'scale(1.2)',
+                                transition : '.3s'}));
+                                $('.passport').click(()=> {
+                                    $('.passport').fadeOut(1000, function() {
+                                        $('.passport-in').show();
+                                        $('.passport-in').animate({bottom:'+=80px', opacity : '+=1'},1000,"swing",()=> {
+                                            $('.passport-in').toggleClass('rotate0')
+                                           
+                                            setTimeout(()=> {
+                                                $('.passport-name').fadeIn();
+                                            },1500);
+                                            $('.ps-accept').click(function() {
+                                                name = $('.name-input').val();
+                                                age = $('.age-input').val();
+                                                nation = $('.nation-input').val();
+                                                console.log(name+age+nation);
+                                                $('.ps-name-end').text(name);
+                                                $('.ps-age-end').text(age);
+                                                $('.ps-nation-end').text(nation);
+                                                $('.passport-name').fadeOut(()=> {
+                                                    $('.passport-name-end').fadeIn();
+                                                    $('.stamp').fadeIn();
+                                                    $('.stamp').animate({left: '-=150px',bottom : '-=170px'},()=> {
+                                                        $('.chulguk').fadeIn(()=>{
+                                                            $('.stamp').animate({left: '+=150px',bottom : '+=170px'},()=> {
+                                                            $('.stamp').fadeOut(1000,"swing",function() {
+                                                                $('#pass').animate({opacity : '0'},1000),()=> {
+                                                                    $('#pass').css({display : 'none'},1000);
+                                                                   
+                                                                };
+                                                                $('.passport-name-end').fadeOut(1000);
+                                                                $('#chulguk').fadeOut(1000,()=> {
+                                                                    setTimeout(()=>{
+                                                                        $('.testPage').show();
+                                                                        kioskView();
+                                                                    },2000)
+                                                                });
+                                                                
+                                                            });
+
+                                                            });
+
+                                                        });
+                                                    })
+
+                                                });
+
+                                            })
+                                       
+                                        });
+                                        
+                                    });
+                                   
+                                });
+                            });
+                        });
+                    }));
+                })
+            },3000));
+            
+            
+                
+        }
+       
+       let kioskView = function() {
+        let bp = 0;   
+        $('.depart').hide();
+        $('.bp-name').hide();
+        $('.tw-bp').hide();
+        $('.ka-bp').hide();
+        $('.da-bp').hide();
+        $('.hid').hide();
+        $('.testpass').hide();
+        $('html, body').scrollTop(0);
+            $('.kiosk-all').css({bottom : '-350px'});
+            $('.kiosk-all').animate({bottom : '+=700px'},1500);
+            // 종이티켓 발권
+            $('.paper').click(function() {
+                $('.paper').fadeOut();
+                $('.mobile').fadeOut();
+                $('.kiosk-all').animate({bottom : '+=800px'},1500,()=> {
+                    bp = 1;
+                    $('.hid').show();
+                    $('.'+ticketType).show();
+                    $('.'+ticketType).animate({bottom : '-=250px'},2000);
+                  
+                      $('.'+ticketType).hover(function() {
+                     $('.'+ticketType).animate({scale : '1.1'},200);
+                     },function() {
+                   $('.'+ticketType).animate({scale : '1.0'},200);
+                      });
+                    
+
+                    $('.'+ticketType).click(function() {
+                        $('.'+ticketType).unbind('mouseenter mouseleave');
+                        $('.'+ticketType).fadeOut(100,() => {
+                            $('.hid').css({overflow : 'visible'});
+                            $('.'+ticketType).css({top : '+=500px'});
+                            $('.bp-name').fadeIn(1500,()=> {
+                                setTimeout(()=>{
+                                    $('.bp-name').fadeOut();
+                                    $('.'+ticketType).fadeOut(()=> {
+                                        
+                                        $('.'+ticketType).animate({rotate : '-180deg'});
+                                        $('.'+ticketType).css({bottom : '+=1500px',opacity: 0});
+                                        $('.testpass').fadeIn(()=> {
+                                            $('.'+ticketType).fadeIn();
+                                            $('.'+ticketType).animate({bottom : '-=1300px',opacity : 1},3000,()=>{
+                                            
+                                                $('.depart').fadeIn();
+                                            });
+                                            $('.depart').fadeIn();
+
+                                        });
+
+                                    });
+                                },3000);
+                            });
+                            $('.'+ticketType).fadeIn();
+                            
+                            $('.'+ticketType).unbind('click');
+                            
+                            
+                        });
+                        $('.kiosk-all').fadeOut(1000);
+                        $('.'+ticketType).animate({rotate : '90deg'})
+                        
+                       
+                       
+
+                    });    
+                      
+                    
+                });
+            });
+
+            // 전자티켓 발권
+            $('.mobile').click(function() {
+                $('.paper').fadeOut();
+                $('.mobile').fadeOut();
+            })
+        
+         
+        // $('.tw-bp').hide();
+        // $('.paper-choose').hide(); 
+        // $('.paper').hide(); 
+        // $('.mobile').hide();
+        // $('.kiosk').css({top : '1100px'});
+        //    $('.kiosk').animate({top : '-=1040px'},1500,()=> {
+        //     $('.paper').fadeIn();
+        //     $('.mobile').fadeIn();
+        //     $('.paper').click(() => {
+        //         ticketOf = 1;
+        //         $('.paper').fadeOut();
+        //         $('.mobile').fadeOut();
+               
+        //         $('.a').animate({top : '-=800px'},1500,()=> {
+        //             $('.paper-choose').show(); 
+        //             $('.tw-bp').show();
+        //             $('.tw-bp').animate({top: '+=500px'},3000,() => {
+        //                 $('.tw-bp').hover(function() {
+        //                     $('.tw-bp').scale(1.1);
+        //                 },function() {
+        //                     $('.tw-bp').scale(1.0);
+        //                 });
+        //                 $('.tw-bp').click(function() {
+        //                     $('.ticket-box').fadeOut();
+        //                     $('.kiosk').fadeOut();
+        //                     $('.tw-bp').fadeOut(()=> {
+        //                         $('.tw-bp').rotate(90);
+        //                         $('.paper-choose').css({overflow : 'visible'});
+        //                         $('.paper-choose').css({width : '0px',height : '0px'});
+        //                         $('.tw-bp').css({top:'0px',bottom:'250px',left:'0px',right:'100px'});
+        //                         $('.tw-bp').fadeIn();
+        //                     })
+                            
+                    
+                    
+                            
+        //                 });
+                        
+        //             });
+                  
+                    
+        //         });
+               
+        //     });
+        //     $('.mobile').click(() => {
+        //         ticketOf= 2;
+        //     });
+            
+        //    });
+       }
+       
+       let airplaneView = function() {
+           $('.air-dia1').hide();
+           setTimeout(()=> {
+            $('.air-dia1').fadeIn(3000,()=>{
+              setTimeout(()=>{
+                $('.air-dia1').fadeOut(3000); 
+              },5000)  
+            });
+           },5000)
+        // $('.air-cloud').animate({left:'+=800'},20000)
+         
+       }
+       
+        // firstView();
+        // secondView();
+        // thirdView();
+        // fourthView();
+        // kioskView();
+    //    kioskView();
+    airplaneView();
+
+
+
+
+    </script>
+</body>
+</html>
