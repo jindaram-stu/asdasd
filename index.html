@@ -157,10 +157,16 @@
                     <img class="air-title-back" src="img/airplane/titie-back.svg">
                     <img class="mirror" src="img/airplane/mirror.svg" alt="">
                     <p class="air-dia1">눈을 감고, 여행 가는 기분을 느껴보세요.</p>
-                    <button>SKIP</button>
-                    <audio src="sound/air-sound-fade.mp3" autoplay loop preload></audio>
+                    <button class="arrived">도착</button>
+                    <audio id="myAudio" >
+                        <source  src="sound/air-sound-all.mp3" type="audio/mp3">
+                    </audio>
                 </div>
 
+            </div>
+
+            <div class="travel-page">
+                <img class = "one" src="img/travel/one.jpg" alt="">
             </div>
             
         </div>
@@ -171,7 +177,7 @@
         let nation = "";
         let ticketOf = null;
         let ticketType = "tw-bp";
-        let airsound = new Audio();
+        
 
 
 
@@ -180,7 +186,9 @@
         $('#first-page').hide();
         $('#second-page').hide();
         $('#third-page').hide();
-        $('#fourth-page').hide();
+        // $('#fourth-page').hide();
+        $('.airplane-page').hide();
+        $('.travel-page').hide();
 
         let firstView = function () {
             $('#logo').animate({opacity : '+=1'},2000)
@@ -218,9 +226,6 @@
         }
       
 
-      
-
-     
         let fourthView = function() {
         
             $('.stamp').hide();
@@ -347,10 +352,17 @@
                                         $('.testpass').fadeIn(()=> {
                                             $('.'+ticketType).fadeIn();
                                             $('.'+ticketType).animate({bottom : '-=1300px',opacity : 1},3000,()=>{
-                                            
                                                 $('.depart').fadeIn();
+                                                $('.depart').click(()=>
+                                                {
+                                                    $('.testPage').fadeOut();
+                                                    setTimeout(()=>{
+                                                        $('.airplane-page').fadeIn(4000);
+                                                        airplaneView();
+                                                    },3000)
+                                                })
                                             });
-                                            $('.depart').fadeIn();
+                                            
 
                                         });
 
@@ -434,10 +446,15 @@
        }
        
        let airplaneView = function() {
-            // airsound.volume = 0.5;
+           
+        document.getElementById('myAudio').play();
+
+        
             // airsound.play();
            $('.air-dia1').hide();
            setTimeout(()=> {
+            
+            
             $('.air-dia1').fadeIn(3000,()=>{
               setTimeout(()=>{
                 $('.air-dia1').fadeOut(3000); 
@@ -451,10 +468,10 @@
         // firstView();
         // secondView();
         // thirdView();
-        // fourthView();
+        fourthView();
         // kioskView();
     //    kioskView();
-    airplaneView();
+    // airplaneView();
 
 
 
