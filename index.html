@@ -157,6 +157,8 @@
                     <img class="air-title-back" src="img/airplane/titie-back.svg">
                     <img class="mirror" src="img/airplane/mirror.svg" alt="">
                     <p class="air-dia1">눈을 감고, 여행 가는 기분을 느껴보세요.</p>
+                    <button>SKIP</button>
+                    <audio src="sound/air-sound-fade.mp3" autoplay loop preload></audio>
                 </div>
 
             </div>
@@ -169,6 +171,10 @@
         let nation = "";
         let ticketOf = null;
         let ticketType = "tw-bp";
+        let airsound = new Audio();
+
+
+
         
         $('.testPage').hide();
         $('#first-page').hide();
@@ -428,6 +434,8 @@
        }
        
        let airplaneView = function() {
+            // airsound.volume = 0.5;
+            // airsound.play();
            $('.air-dia1').hide();
            setTimeout(()=> {
             $('.air-dia1').fadeIn(3000,()=>{
