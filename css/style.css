@@ -994,5 +994,201 @@
     bottom : 0px;
     margin : auto;
 }
+.q-setting {
+    position : relative;
+    left : 0px;
+    right :0px;
+    top : 0px;
+    bottom : 0px;
+    margin : auto;
+    width : 1000px;
+    height : 600px;
+    
+
+}
+.title {
+    position : absolute;
+    top : 0px;
+    bottom : 400px;
+    left : 0px;
+    right : 0px;
+    margin : auto;
+    text-align : center;
+    font-family: 'Nanum Myeongjo', sans-serif;
+    font-size : 35px;
+}
+.a1-pa {
+    display : table;
+    position : absolute;
+    top : 0px;
+    bottom : 100px;
+    left : 0px;
+    right : 340px;
+    margin : auto;
+
+    width : 300px;
+    height : 200px;
+}
+
+.a1 {
+    display : table-cell;
+    vertical-align: middle;
+    text-align : center;
+    font-family: 'Nanum Myeongjo', sans-serif;
+    font-size : 35px;
+    transform : scale(1.0);
+    transition : .3s;
+}
+
+.a1:hover {
+    transform : scale(1.5);
+    transition : .3s;
+}
+
+.a2-pa {
+    display : table;
+    
+    position : absolute;
+    top : 0px;
+    bottom : 100px;
+    left : 340px;
+    right : 0px;
+    margin : auto;
+   
+    width : 300px;
+    height : 200px;
+}
+.a2 {
+    display : table-cell;
+    vertical-align: middle;
+    text-align : center;
+    font-family: 'Nanum Myeongjo', sans-serif;
+    font-size : 35px;
+    transform : scale(1.0);
+    transition : .3s;
+}
+.a2:hover {
+    transform : scale(1.5);
+    transition : .3s;
+}
 
 
+
+.center-line {
+    position : absolute;
+    top : 0px;
+    bottom : 100px;
+    left : 0px;
+    right : 0px;
+    margin : auto;
+    width:1px;
+    height : 200px;
+    border-right : 0.5px solid black;
+}
+
+
+/*q1*/
+
+.q1-airplane {
+    animation: q1-air;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: swing;
+    z-index: -2;
+    position : absolute;
+    top:0px;
+    bottom : 0px;
+    left : 0px;
+    right : 0px;
+    width : 45%;
+    margin : auto;
+}
+
+@keyframes q1-air {
+    from {
+        left : -1100px;
+    }
+
+    to {
+        left : 800px;
+    }
+}
+
+.road {
+    z-index: -3;
+    position : absolute;
+    top:0px;
+    bottom : 0px;
+    left : 0px;
+    right : 0px;
+    width : 100%;
+    margin : auto;
+}
+
+.hid-air1 {
+    z-index: -1;
+    position : relative;
+    top:400px;
+    bottom : 0px;
+    left : 0px;
+    right : 0px;
+    
+    margin : auto;
+    width : 700px;
+    height : 200px;
+    overflow : hidden;
+    
+}
+
+/*q2*/
+
+.hid-wave {
+    z-index: -1;
+    position : relative;
+    top:170px;
+    bottom : 0px;
+    left : 0px;
+    right : 0px;
+    
+    margin : auto;
+    width : 700px;
+    height : 380px;
+    overflow : hidden;
+    
+}
+
+.q2-wave {
+    animation: wave;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: swing;
+    z-index: -2;
+    position : absolute;
+    top: 0px;
+    bottom : 0px;
+    left : 0px;
+    right : 0px;
+    width : 100%;
+    margin : auto;
+}
+@keyframes wave { 
+    0% {
+        top : 700px;
+    } 
+    50% {
+        top : 150px;
+    } 100% {
+        top : 700px;
+    }
+}
+
+.beach {
+    z-index: -3;
+    position : absolute;
+    top: 0px;
+    bottom : 100px;
+    left : 0px;
+    right : 0px;
+    width : 45%;
+    margin : auto;
+}
