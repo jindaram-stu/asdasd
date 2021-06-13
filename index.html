@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website"> 
+  <meta property="og:title" content="여행성향테스트">
+  <meta property="og:description" content="가상 여행을 떠나 체크하는 여행성향 테스트">
+  <meta property="og:image" content="https://jsb-trip-propensity.netlify.app/ico.png">
+  <meta property="og:url" content="https://jsb-trip-propensity.netlify.app">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
@@ -15,15 +20,17 @@
     <div class="container">
         <div class="main">
             <div id="first-page" class="first-page">
+                <p id="yst">#여행 성향 테스트</p>
                 <p id="logo">여행, 그리고</p>
+                
                 <button class="btn_start">떠나기</button>
             </div>
             <div id="second-page" class="second-page">
                 <p id="mungu" class="mungu">여행에 가져갈 짐을 선택해주세요.</p>
                 <img class="carrier" src="img/carrier.png" alt="">
                 <div class="btn-list">
-                    <button class="lug1 cloth">옷</button>
-                    <button class="lug2 korean-food">한식</button><br>
+                    <button class="lug1 cloth ho">옷</button>
+                    <button class="lug2 korean-food ho">한식</button><br>
                     <button class="lug1 washing">세면도구</button>
                     <button class="lug2 cellphone">핸드폰</button><br>
                     <button class="lug1 diary">일기장</button>
@@ -32,6 +39,7 @@
                     <button class="lug2 cash">현금</button>
                 </div><br>
                 <button class="accept">확인</button>
+                <button class="ag-choice">다시선택</button>
             </div>
 
             <div class="third-page" id="third-page">
@@ -128,6 +136,7 @@
             </div>
 
             <div class="airplane-page">
+               
                 <div class="window">
                     <img class="air-title" src="img/airplane/title.svg" alt="">``
                     <img class="air-sky" src="img/airplane/sky.svg" alt="">
@@ -148,9 +157,11 @@
             </div>
 
             <div class="travel-page">
+                
+            
                 <!-- <img class = "one" src="img/travel/one.jpg" alt=""> -->
                 <div class="q1 q-setting">
-                        <p class="title">공항에 도착한 당신, 어디부터 가실 껀가요?</p>
+                        <p class="title">공항에 도착한 당신, 어디부터 갈까?</p>
                         <div class="a1-pa"><p class="q1-a1 a1">숙소</p></div>
                         <div class="a2-pa"><p class="q1-a2 a2">관광지</p></div>
                         
@@ -159,7 +170,7 @@
                 </div>
                 <div class="q2">
                     <img src="img/q2/beach.svg" alt="" class="beach">
-                    <p class="title">당신은 여행을 하던 도중, 배가 고파졌습니다.</p>
+                    <p class="title">여행을 하던 도중, 배가 고파졌다.</p>
                     
                     <div class="a1-pa"><p class="q2-a1 a1" style ="font-size : 25px;">미리 알아봐 둔 곳으로 가서 먹는다.</p></div>
                     <div class="a2-pa"><p class="q2-a2 a2" style ="font-size : 25px;">근처에 맛있어 보이는 곳을 가서 먹는다.</p></div>
@@ -171,7 +182,7 @@
 
                 <div class="q3 q-setting">
                     
-                    <p class="title">여행 두번째 날, 아침부터 비가 쏟아져 내립니다.</p>
+                    <p class="title">여행 두번째 날, 아침부터 비가 쏟아져 내린다.</p>
                     
                     <div class="a1-pa"><p class="q3-a1 a1" style ="font-size : 25px;">계획대로 여행</p></div>
                     <div class="a2-pa"><p class="q3-a2 a2" style ="font-size : 25px;">숙소에 있기</p></div>
@@ -182,7 +193,7 @@
                 </div>
 
                 <div class="q4 q-setting">
-                        <p class="title">가고자 하는 관광 명소까지 도보로 30분이 걸립니다.</p>
+                        <p class="title">가고자 하는 관광 명소까지 도보로 30분이 걸린다.</p>
                         <div class="a1-pa"><p class="q4-a1 a1">교통 이용</p></div>
                         <div class="a2-pa"><p class="q4-a2 a2">걷는다.</p></div>
                         
@@ -222,9 +233,17 @@
                         <div class="hid-air1"><img class="q1-airplane" src="img/q1/q1-airplane.svg" alt="">
                             <img src="/img/q1/road.svg" alt="" class="road"></div>
                 </div>
+                <audio id="vlog" src="img/travel_sound/vlog.mp3" ></audio>
                 
             </div>
-            
+            <div class="result-page">
+                
+                    <p class="result-dia1">당신의 여행 성향은</p>
+                <img class="result-item" src="" alt="">
+                <p class="result-dia2"><b>"일기장"</b></p>
+                <p class="result-dia3">여행 중 기록하는 것을 좋아하는 당신, 여행 중 느낀 것을 중요시하고 그것을 기록하는 것을 좋아하기 때문에<br> <b>'일기장'</b>과 어울립니다.</p>
+                
+            </div>
         </div>
     </div>
     <script>  
@@ -234,6 +253,15 @@
         let ticketOf = null;
         let ticketType = "tw-bp";
         let propen ="";
+        let lug = 0;
+        let cloth = 0;
+        let korean_food = 0;
+        let washing = 0;
+        let cellphone = 0;
+        let diary = 0;
+        let selfie = 0;
+        let medicine = 0;
+        let cash = 0;
         let c = 0;
         let a = 0;
         let p = 0;
@@ -241,7 +269,16 @@
         let r = 0;
         let e = 0;
 
-
+        var res = {
+            "CPR": {"title":"일기장","subtitle":"여행 중 기록하는 것을 좋아하는 당신, 여행 중 느낀 것을 중요시하고 그것을 기록하는 것을 좋아하기 때문에 <br><b>'일기장'</b>과 어울립니다. ","imgurl":"img/result/note.svg"},
+            "CPE": {"title":"스마트폰","subtitle":"편안한 여행을 선호하고, 경험하는 것을 더 선호하는 당신은 원하는 정보를 쉽게 찾을 수 있는 <br><b>'스마트폰'</b>과 어울립니다!","imgurl":"img/result/smartphone.svg"},
+            "CIR": {"title":"셀카봉","subtitle":"편안한 여행을 좋아하지만, 여러가지 상황에 따라 다른 선택을 하는 성향인 당신은 눈치 안 보고, 모든 것을 담을 수 있는 <br><b>'셀카봉'</b>과 어울립니다!","imgurl":"img/result/selfie.svg"},
+            "CIE": {"title":"배낭","subtitle":"편안한 것을 즐기지만, 즉흥적으로 하는 것을 좋아하는 당신은 편안히 어디든 떠날 수 있는 <br><b>'배낭'</b>과 어울립니다.","imgurl":"img/result/bag.svg"},
+            "APR": {"title":"카메라","subtitle":"동적인 여행을 하며 여행의 흔적을 남기는 것을 좋아하는 당신, 움직이는 것들을 남길 수 있는 <br><b>'카메라'</b>와 어울립니다!","imgurl":"img/result/camera.svg"},
+            "APE": {"title":"지도","subtitle":"계획에 맞춰 여행을 하는 것을 선호하며, 활동적이고 사진을 찍는 것 보다는 그대로 경험하는 것을 더 선호합니다. 그런 당신과는 세상의 모든 정보가 담겨있는 <br><b>'지도'</b>와 어울립니다.","imgurl":"img/result/map.svg"},
+            "AIR": {"title":"스마트폰 방수 케이스","subtitle":"활동적이고 기록하는 것을 선호하지만, 계획보다는 즉흥적으로 선택을 선호하는 당신은 활동적인 여행과 여행의 흔적 남기기 둘다 택할 수 있는 <br>'<b>스마트폰 방수 케이스'</b>와 어울립니다.","imgurl":"img/result/waterproof.svg"},
+            "AIE": {"title":"쪼리","subtitle":"이곳 저곳을 돌아다니며 많은 곳과 많은 것을 경험하는 것을 좋아하는 당신, 어디든 편하게 떠날 수 있는 <br><b>'쪼리'</b>와 어울립니다! ","imgurl":"img/result/flip-flop.svg"}
+        }
         
         
         // $('#first-page').hide();
@@ -251,10 +288,12 @@
         $('.testPage').hide();
         $('.airplane-page').hide();
         $('.travel-page').hide();
+        $('.result-page').hide();
 
         let firstView = function () {
+            $('#yst').animate({opacity : '+=1'},2000)
             $('#logo').animate({opacity : '+=1'},2000)
-            $('.btn_start').click(()=> {
+            $('.btn_start').one('click',()=> {
                 $('#first-page').fadeOut(()=> {
                     $('#second-page').fadeIn();
                     secondView();
@@ -267,12 +306,122 @@
                 $('.lug2').animate({opacity : '+=1',left : '-=30',top : '-=30'},1000,'swing');
                 $('.lug1').animate({opacity : '+=1',left : '-=30',top : '-=30'},1000,'swing');
             });
-            $('.accept').click(()=> {
+            $('.accept').one('click',()=> {
+                if (lug > 5) {
+                    p += 1;
+                    console.log(p)
+                    console.log(i)
+                } else {
+                    i += 1;
+                    console.log(p)
+                    console.log(i)
+                }
                 $('#second-page').fadeOut(()=>{
                     $('#third-page').fadeIn();
                     thirdView();
                 });
+               
             })
+
+            $('.cloth').click(()=> {
+                    $('.cloth').css({'background-color' : '#076445'});
+                    if (cloth == 0) {
+                        lug += 1;
+                    }
+                    cloth = 1;
+                    console.log(lug);
+                   
+                }) ;
+                $('.korean-food').click(()=> {
+                    $('.korean-food').css({'background-color' : '#076445'});
+                    if (korean_food == 0) {
+                        lug += 1;
+                    }
+                    korean_food = 1;
+                    console.log(lug);
+                   
+                }) ;
+
+                $('.washing').click(()=> {
+                    $('.washing').css({'background-color' : '#076445'});
+                    if (washing == 0) {
+                        lug += 1;
+                    }
+                    washing = 1;
+                    console.log(lug);
+                   
+                }) ;
+                $('.cellphone').click(()=> {
+                    $('.cellphone').css({'background-color' : '#076445'});
+                    if (cellphone == 0) {
+                        lug += 1;
+                    }
+                    cellphone = 1;
+                    console.log(lug);
+                   
+                }) ;
+
+                $('.diary').click(()=> {
+                    $('.diary').css({'background-color' : '#076445'});
+                    if (diary == 0) {
+                        lug += 1;
+                    }
+                    diary = 1;
+                    console.log(lug);
+                   
+                }) ;
+
+                $('.selfie').click(()=> {
+                    $('.selfie').css({'background-color' : '#076445'});
+                    if (selfie == 0) {
+                        lug += 1;
+                    }
+                    selfie = 1;
+                    console.log(lug);
+                   
+                }) ;
+
+                $('.medicine').click(()=> {
+                    $('.medicine').css({'background-color' : '#076445'});
+                    if (medicine == 0) {
+                        lug += 1;
+                    }
+                    medicine = 1;
+                    console.log(lug);
+                   
+                }) ;
+                $('.cash').click(()=> {
+                    $('.cash').css({'background-color' : '#076445'});
+                    if (cash == 0) {
+                        lug += 1;
+                    }
+                    cash = 1;
+                    console.log(lug);
+                }) ;
+
+
+                $('.ag-choice').click(()=> {
+                    $('.cloth').css({'background-color' : '#0da774'});
+                    $('.korean-food').css({'background-color' : '#0da774'});
+                    $('.washing').css({'background-color' : '#0da774'});
+                    $('.cellphone').css({'background-color' : '#0da774'});
+                    $('.diary').css({'background-color' : '#0da774'});
+                    $('.selfie').css({'background-color' : '#0da774'});
+                    $('.medicine').css({'background-color' : '#0da774'});
+                    $('.cash').css({'background-color' : '#0da774'});
+                    lug = 0;
+                    cloth = 0;
+                    korean_food = 0;
+                    washing = 0;
+                    cellphone = 0;
+                    diary = 0;
+                    selfie = 0;
+                    medicine = 0;
+                    cash = 0;
+                    console.log(lug);
+                   
+                }) ;
+
         }
 
         let thirdView = function() {
@@ -284,15 +433,16 @@
                     $('#third-reser').animate({bottom: '+=500px', opacity: '+=1'},1000,'swing');
                 });
             });
-            $('#first-reser').click(() => {
+            $('#first-reser').one('click',() => {
                 ticketType = "tw-bp";
                 $('#third-page').fadeOut(()=>{
                     $('#fourth-page').fadeIn();
                     fourthView();
                 });
             });
-            $('#second-reser').click(() => {
+            $('#second-reser').one('click',() => {
                 ticketType = "ka-bp";
+
                 $('#third-page').fadeOut(()=>{
                     $('#fourth-page').fadeIn();
                     fourthView();
@@ -324,7 +474,7 @@
                             $('.passport').animate({bottom : '+=700px'},1000,'swing',() => {
                                 $('.passport').mouseenter($('.passport').animate({transform : 'scale(1.2)',
                                 transition : '.3s'}));
-                                $('.passport').click(()=> {
+                                $('.passport').one('click',()=> {
                                     $('.passport').fadeOut(1000, function() {
                                         $('.passport-in').show();
                                         $('.passport-in').animate({bottom:'+=80px', opacity : '+=1'},1000,"swing",()=> {
@@ -333,13 +483,15 @@
                                             setTimeout(()=> {
                                                 $('.passport-name').fadeIn();
                                             },1500);
-                                            $('.ps-accept').click(function() {
+                                            $('.ps-accept').one('click',function() {
                                                 name = $('.name-input').val();
                                                 age = $('.age-input').val();
                                                 nation = $('.nation-input').val();
                                                 console.log(name+age+nation);
                                                 $('.ps-name-end').text(name);
+                                              
                                                 $('.ps-age-end').text(age);
+                                                $('.bp-name').html(name);
                                                 $('.ps-nation-end').text(nation);
                                                 $('.passport-name').fadeOut(()=> {
                                                     $('.passport-name-end').fadeIn();
@@ -399,7 +551,8 @@
             $('.kiosk-all').css({bottom : '-350px'});
             $('.kiosk-all').animate({bottom : '+=700px'},1500);
             // 종이티켓 발권
-            $('.paper').click(function() {
+            $('.paper').one('click',function() {
+                r += 1;
                 $('.paper').fadeOut();
                 $('.mobile').fadeOut();
                 $('.kiosk-all').animate({bottom : '+=800px'},1500,()=> {
@@ -408,14 +561,14 @@
                     $('.'+ticketType).show();
                     $('.'+ticketType).animate({bottom : '-=250px'},2000);
                   
-                      $('.'+ticketType).hover(function() {
+                      $('.'+ticketType).hover(()=> {
                      $('.'+ticketType).animate({scale : '1.1'},200);
-                     },function() {
+                     },()=> {
                    $('.'+ticketType).animate({scale : '1.0'},200);
                       });
                     
 
-                    $('.'+ticketType).click(function() {
+                    $('.'+ticketType).one('click',function() {
                         $('.'+ticketType).unbind('mouseenter mouseleave');
                         $('.'+ticketType).fadeOut(100,() => {
                             $('.hid').css({overflow : 'visible'});
@@ -431,7 +584,7 @@
                                             $('.'+ticketType).fadeIn();
                                             $('.'+ticketType).animate({bottom : '-=1300px',opacity : 1},3000,()=>{
                                                 $('.depart').fadeIn();
-                                                $('.depart').click(()=>
+                                                $('.depart').one('click',()=>
                                                 {
                                                     $('.testPage').fadeOut();
                                                     setTimeout(()=>{
@@ -466,62 +619,27 @@
             });
 
             // 전자티켓 발권
-            $('.mobile').click(function() {
+            $('.mobile').one('click',function() {
+                e += 1;
                 $('.paper').fadeOut();
                 $('.mobile').fadeOut();
+                $('.kiosk-all').fadeOut(1000,()=>{
+                    $('.testpass').fadeIn(()=>{
+                        $('.depart').fadeIn();
+                        $('.depart').one('click',()=>
+                                                {
+                                                    $('.testPage').fadeOut();
+                                                    setTimeout(()=>{
+                                                        $('.airplane-page').fadeIn(4000);
+                                                        airplaneView();
+                                                    },3000)
+                                                })
+                    });
+                });
             })
-        
-         
-        // $('.tw-bp').hide();
-        // $('.paper-choose').hide(); 
-        // $('.paper').hide(); 
-        // $('.mobile').hide();
-        // $('.kiosk').css({top : '1100px'});
-        //    $('.kiosk').animate({top : '-=1040px'},1500,()=> {
-        //     $('.paper').fadeIn();
-        //     $('.mobile').fadeIn();
-        //     $('.paper').click(() => {
-        //         ticketOf = 1;
-        //         $('.paper').fadeOut();
-        //         $('.mobile').fadeOut();
-               
-        //         $('.a').animate({top : '-=800px'},1500,()=> {
-        //             $('.paper-choose').show(); 
-        //             $('.tw-bp').show();
-        //             $('.tw-bp').animate({top: '+=500px'},3000,() => {
-        //                 $('.tw-bp').hover(function() {
-        //                     $('.tw-bp').scale(1.1);
-        //                 },function() {
-        //                     $('.tw-bp').scale(1.0);
-        //                 });
-        //                 $('.tw-bp').click(function() {
-        //                     $('.ticket-box').fadeOut();
-        //                     $('.kiosk').fadeOut();
-        //                     $('.tw-bp').fadeOut(()=> {
-        //                         $('.tw-bp').rotate(90);
-        //                         $('.paper-choose').css({overflow : 'visible'});
-        //                         $('.paper-choose').css({width : '0px',height : '0px'});
-        //                         $('.tw-bp').css({top:'0px',bottom:'250px',left:'0px',right:'100px'});
-        //                         $('.tw-bp').fadeIn();
-        //                     })
-                            
-                    
-                    
-                            
-        //                 });
-                        
-        //             });
-                  
-                    
-        //         });
-               
-        //     });
-        //     $('.mobile').click(() => {
-        //         ticketOf= 2;
-        //     });
-            
-        //    });
        }
+
+    
        
        let airplaneView = function() {
         $('.arrived').hide();
@@ -542,13 +660,14 @@
 
            setTimeout(()=> {
            $('.arrived').fadeIn();
-       },57000);
+       },56000);
 
 
-            $('.arrived').click(()=> {
+            $('.arrived').one('click',()=> {
                 $('.airplane-page').fadeOut(()=>{
                     $('.travel-page').fadeIn();
                     travelView();
+                    document.getElementById('myAudio').pause();
                 });
 
             })
@@ -557,16 +676,39 @@
        }
        
        let travelView = function() {
-          
         
+                
            $('.q2').hide();
            $('.q3').hide();
            $('.q4').hide();
            $('.q5').hide();
            $('.q6').hide();
            $('.q7').hide();
+           var vlog = document.getElementById('vlog');
+           vlog.volume = 0.4;
+           vlog.play();
+            //    $('.loud-sound').on('click',()=>{
+            //         vlog.volume = 0.6;
+            //         $('.loud-sound').css({'background-color':'black'});
+            //         $('.medium-sound').css({'background-color':'black'});
+            //         $('.small-sound').css({'background-color':'black'});
+            //    })
 
-           $('.q1-a1').click(()=> {
+            //    $('.medium-sound').on('click',()=>{
+            //         vlog.volume = 0.4;
+            //         $('.loud-sound').css({'background-color':'white'});
+            //         $('.medium-sound').css({'background-color':'black'});
+            //         $('.small-sound').css({'background-color':'black'});
+            //    })
+
+            //    $('.small-sound').on('click',()=>{
+            //         vlog.volume = 0.2;
+            //         $('.loud-sound').css({'background-color':'white'});
+            //         $('.medium-sound').css({'background-color':'white'});
+            //         $('.small-sound').css({'background-color':'black'});
+            //    })
+
+           $('.q1-a1').one('click',()=> {
                c+=1;
                console.log(c);
                $('.q1').animate({top : '+=1500px'},2000,()=> {
@@ -575,7 +717,7 @@
                });
 
            });
-           $('.q1-a2').click(()=> {
+           $('.q1-a2').one('click',()=> {
                a+=1;
                $('.q1').animate({top : '+=1500px'},2000,()=> {
                 $('.q1').hide();
@@ -592,7 +734,7 @@
 
        let q2 = function() {
            $('.q2').fadeIn(1000, ()=> {
-            $('.q2-a1').click(()=> {
+            $('.q2-a1').one('click',()=> {
                p+=1;
                console.log(p);
                $('.q2').animate({top : '+=1500px'},2000,()=> {
@@ -601,7 +743,7 @@
                });
 
            });
-           $('.q2-a2').click(()=> {
+           $('.q2-a2').one('click',()=> {
                i+=1;
                $('.q2').animate({top : '+=1500px'},2000,()=> {
                 $('.q2').hide();
@@ -617,7 +759,7 @@
 
         let q3 = function() {
             $('.q3').fadeIn(1000, ()=> {
-            $('.q3-a1').click(()=> {
+            $('.q3-a1').one('click',()=> {
                a+=1;
                console.log(p);
                $('.q3').animate({top : '+=1500px'},2000,()=> {
@@ -626,7 +768,7 @@
                });
 
            });
-           $('.q3-a2').click(()=> {
+           $('.q3-a2').one('click',()=> {
                c+=1;
                $('.q3').animate({top : '+=1500px'},2000,()=> {
                 $('.q3').hide();
@@ -643,7 +785,7 @@
         let q4 = function() {
            
             $('.q4').fadeIn(1000, ()=> {
-            $('.q4-a1').click(()=> {
+            $('.q4-a1').one('click',()=> {
                c+=1;
                console.log(p);
                $('.q4').animate({top : '+=1500px'},2000,()=> {
@@ -652,7 +794,7 @@
                });
 
            });
-           $('.q4-a2').click(()=> {
+           $('.q4-a2').one('click',()=> {
                a+=1;
                $('.q4').animate({top : '+=1500px'},2000,()=> {
                 $('.q4').hide();
@@ -669,7 +811,7 @@
 
         let q5 = function() {
             $('.q5').fadeIn(1000, ()=> {
-            $('.q5-a1').click(()=> {
+            $('.q5-a1').one('click',()=> {
                r+=1;
                console.log(p);
                $('.q5').animate({top : '+=1500px'},2000,()=> {
@@ -678,7 +820,7 @@
                });
 
            });
-           $('.q5-a2').click(()=> {
+           $('.q5-a2').one('click',()=> {
                e+=1;
                $('.q5').animate({top : '+=1500px'},2000,()=> {
                 $('.q5').hide();
@@ -697,7 +839,7 @@
         let q6 = function() {
            
             $('.q6').fadeIn(1000, ()=> {
-            $('.q6-a1').click(()=> {
+            $('.q6-a1').one('click',()=> {
                r+=1;
                console.log(p);
                $('.q6').animate({top : '+=1500px'},2000,()=> {
@@ -706,7 +848,7 @@
                });
 
            });
-           $('.q6-a2').click(()=> {
+           $('.q6-a2').one('click',()=> {
                e+=1;
                $('.q6').animate({top : '+=1500px'},2000,()=> {
                 $('.q6').hide();
@@ -723,7 +865,7 @@
 
         let q7 = function() {
             $('.q7').fadeIn(1000, ()=> {
-            $('.q7-a1').click(()=> {
+            $('.q7-a1').one('click',()=> {
                p+=1;
                console.log(p);
                $('.q7').animate({top : '+=1500px'},2000,()=> {
@@ -732,7 +874,7 @@
                });
 
            });
-           $('.q7-a2').click(()=> {
+           $('.q7-a2').one('click',()=> {
                i+=1;
                $('.q7').animate({top : '+=1500px'},2000,()=> {
                 $('.q7').hide();
@@ -755,6 +897,28 @@
             console.log("i:"+i)
             console.log("r:"+r)
             console.log("e:"+e)
+            if (c > a) {
+                propen += "C";
+            } else if (c < a) {
+                propen += "A";
+            }
+
+            if (p > i) {
+                propen += "P";
+            } else if (p < i) {
+                propen += "I";
+            }
+
+            if (r > e) {
+                propen += "R";
+            } else if (r < e) {
+                propen += "E";
+            }
+            console.log(propen)
+            $('.result-item').attr("src",res[propen]["imgurl"]);
+            $('.result-dia2').html('"'+res[propen]["title"]+'"');
+            $('.result-dia3').html(res[propen]["subtitle"]);
+            $('.result-page').fadeIn();
 
         }
         firstView();
@@ -765,6 +929,7 @@
         // kioskView();
         // airplaneView();
         // travelView();
+        // result();
 
 
 

@@ -37,12 +37,19 @@
     font-size : 42px;
     color : #0e0e18;
 }
-
+#yst {
+    opacity: 0;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', sans-serif;
+    font-size : 20px;
+    margin-bottom : 10px;
+    color : #0e0e18;
+}
 .btn_start {
     position : relative;
     left : 50%;
     transform: translate(-50%,-50%);
-    margin-top : 300px;
+    margin-top : 200px;
     width : 120px;
     height :40px;
     border : none;
@@ -52,6 +59,11 @@
     font-size: 16px;
     color : white;
     font-weight : 500
+    ,
+}
+
+.btn_start:hover {
+    background-color: #0b6447;
 }
 /*##############################################*/
 /* SECOND PAGE */
@@ -126,6 +138,25 @@
 
 .accept {
     position : relative;
+    left : 640px;
+    width:120px;
+	height: 40px;
+    background: #d6d6d6;
+    border-radius: 20px;
+    border:none;
+    color : rgb(71, 71, 71);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size : 21px;
+
+}
+
+.accept:hover {
+    background: rgb(71, 71, 71);
+    color : #d6d6d6
+}
+
+.ag-choice {
+    position : relative;
     left : 680px;
     width:120px;
 	height: 40px;
@@ -137,6 +168,19 @@
     font-size : 21px;
 }
 
+.ag-choice:hover {
+    background: rgb(71, 71, 71);
+    color : #d6d6d6
+}
+
+.lug1:hover {
+   background-color: #076445;
+}
+.lug2:hover {
+    background-color: #076445;
+ }
+
+ 
 /*##############################################*/
 /* THIRD PAGE */
 .third-page {
@@ -613,7 +657,7 @@
     bottom : 10px;
     font-family: 'Do Hyeon', sans-serif;
     font-size : 24px;
-    color : #c44a4a;
+    color : #505D5D;
     /*#505D5D*/
 
 }
@@ -991,6 +1035,58 @@
     left : 50%;
     transform: translate(-50%,-50%);
 }
+.sound-control {
+    position : absolute;
+    left : 0px;
+    right : 0px;
+    top : 0px;
+    bottom : 1400px;
+    margin : auto;
+    width : 100px;
+    height : 0px;
+    
+}
+.loud-sound {
+    z-index: 10px;
+    position: absolute;
+    left : 30px;
+    top : 600px;
+    right : 1200px;
+    bottom : 0px;
+    margin : auto;
+    width : 8px;
+    height : 30px;
+    border : 1px solid black;
+    background-color: black;
+}
+
+.medium-sound {
+    z-index: 10px;
+    position: absolute;
+    left : 15px;
+    top : 610px;
+    right : 1240px;
+    bottom : 0px;
+    margin : auto;
+    width : 8px;
+    height : 20px;
+    border : 1px solid black;
+    background-color: black;
+}
+
+.small-sound {
+    z-index: 10px;
+    position: absolute;
+    left : 0px;
+    top : 620px;
+    right : 1280px;
+    bottom : 0px;
+    margin : auto;
+    width : 8px;
+    height : 10px;
+    border : 1px solid black;
+    background-color: black;
+}
 .one {
     width : 1000px;
     position : absolute;
@@ -1228,4 +1324,63 @@
     top : 690px;
     bottom : 0px;
     width  : 800px;
+}
+
+/*result-page*/
+.result-page {
+        width : 1500px;
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%,-50%);
+}
+
+
+.result-dia1 {
+    position: relative;
+    left : 0px;
+    right : 0px;
+    top : 0px;
+    bottom : 0px;
+    margin : auto;
+    width : 290px;
+    font-size : 35px;
+    font-family: 'Nanum Myeongjo', sans-serif;
+}
+
+.result-item {
+    display : block;
+    margin : auto;
+    position: relative;
+    margin-top : 50px;
+    margin-bottom : 50px;
+    width : 10%;
+    
+}
+
+.result-dia3 {
+    position: relative;
+    left : 0px;
+    right : 0px;
+    top : 0px;
+    bottom : 0px;
+    margin : auto;
+    width : 500px;
+    font-size : 20px;
+    text-align : center;
+    font-family: 'Nanum Myeongjo', sans-serif;
+}
+
+.result-dia2 {
+    position: relative;
+    left : 0px;
+    right : 0px;
+    top : 0px;
+    bottom : 0px;
+    margin : auto;
+    width : 500px;
+    font-size : 20px;
+    text-align : center;
+    font-family: 'Nanum Myeongjo', sans-serif;
+    margin-bottom : 50px;
 }
