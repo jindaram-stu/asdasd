@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 /* font-family: 'Nanum Myeongjo', sans-serif; */
 /* font-family: 'Do Hyeon', sans-serif; */
-
+@media all and (max-width : 1024px) {
+   
+}
 * {
     margin : 0;
     padding : 0;
@@ -27,7 +29,7 @@
     position: absolute;
     top : 50%;
     left : 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) ;
 }
 
 #logo {
@@ -69,11 +71,14 @@
 /* SECOND PAGE */
 
 .second-page {
+    display : block;
+ 
     width : 1500px;
     position: absolute;
     top : 50%;
     left : 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1.0);
+    
 }
 
 .mungu {
@@ -90,6 +95,7 @@
     position : relative;
     left : 300px;
     display : inline-block;
+    max-width : 100%;
     width : 400px;
     
 
@@ -101,6 +107,7 @@
     position : relative;
     left : 430px;
     bottom : 30px;
+    
 }
 
 .lug1 {
@@ -118,7 +125,9 @@
     font-size : 21px;
     margin-right : 100px;
     margin-bottom: 50px;
-    
+    max-width: 100%;
+
+
 }
 
 .lug2 {
@@ -134,6 +143,7 @@
     color : white;
     font-family: 'Do Hyeon', sans-serif;
     font-size : 21px;
+    max-width: 100%;
 }
 
 .accept {

@@ -931,9 +931,65 @@
         // travelView();
         // result();
 
+        var sc7 = function() {
+            $('#second-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+            $('#third-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+            $('#fourth-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+            $('.testPage').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+            $('.airplane-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+            $('.travel-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+            $('.result-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.7)"});
+        }
+
+        var sc6 = function() {
+            $('#second-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+            $('#third-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+            $('#fourth-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+            $('.testPage').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+            $('.airplane-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+            $('.travel-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+            $('.result-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.55)"});
+        }
+
+        var sc10 = function() {
+            $('#second-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+            $('#third-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+            $('#fourth-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+            $('.testPage').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+            $('.airplane-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+            $('.travel-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+            $('.result-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(1.0)"});
+        }
+        $(window).resize(function() {
+           if (window.innerHeight < 380) {
+            $('#second-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+            $('#third-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+            $('#fourth-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+            $('.testPage').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+            $('.airplane-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+            $('.travel-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+            $('.result-page').css({"-webkit-transform" : "translate(-50%,-50%) scale(0.35)"});
+           }
+            else if (window.innerWidth < 626 || window.innerHeight < 450) {
+                sc6();
+            } else if ((626 < window.innerWidth && window.innerWidth < 1000) || (450 < window.innerHeight && window.innerHeight < 600)) {
+                sc7(); 
+            } else  if (window.innerWidth > 1000 || windiw.innerHeight > 600) {
+            sc10();
+             }
+
+            
+
+            
+            
+            
+    });
 
 
 
     </script>
+
+
+
 </body>
 </html>
